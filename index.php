@@ -1,5 +1,12 @@
 <?php
-define('MY_APP', true);
+
+session_start();
+
+if (!isset($_SESSION['admin_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
 
 // Get hal
 $page = isset($_GET['hal']) ? $_GET['hal'] : 'dashboard';

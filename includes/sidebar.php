@@ -66,7 +66,7 @@
                         <a class="nav-link" href="layout-static.html">Konfirmasi</a>
                     </nav>
                 </div>
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="logout.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-sign-out"></i></div>
                     Logout
                 </a>
@@ -74,7 +74,7 @@
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
-            Start Bootstrap
+            <?php echo isset($_SESSION['admin_nama_lengkap']) ? htmlspecialchars($_SESSION['admin_nama_lengkap']) : 'JIBRAN PRATAMA'; ?>
         </div>
     </nav>
 </div>
